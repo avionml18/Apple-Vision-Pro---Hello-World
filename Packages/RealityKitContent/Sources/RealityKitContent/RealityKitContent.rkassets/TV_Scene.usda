@@ -1,0 +1,43 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.0.16.0.3)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "tv_retro" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (1.0122911, -0.5759587, -0.17453294)
+        }
+        prepend references = @USDZ Files/tv_retro.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.8474122, 0.44142625, -0.2879741, 0.0640804)
+        float3 xformOp:scale = (0.001503545, 0.001503545, 0.001503545)
+        float3 xformOp:translate = (0.39, 0.66, -0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "tv_retro_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (1.0163052, 0.5794493, -0.16894792)
+        }
+        prepend references = @USDZ Files/tv_retro.usdz@
+    )
+    {
+        float2 ui:nodegraph:node:pos = (20, 20)
+        int ui:nodegraph:node:stackingOrder = 1
+        quatf xformOp:orient = (0.8225198, 0.48568147, 0.20935805, -0.20915039)
+        float3 xformOp:scale = (0.001503545, 0.001503545, 0.001503545)
+        float3 xformOp:translate = (-0.39, 0.66, -0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

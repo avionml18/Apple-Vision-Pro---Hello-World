@@ -12,11 +12,11 @@ import RealityKitContent
 
 struct ContentView: View {
     // ContentView: This allows you to use the contentview screen to visual see what you're coding
-    @State var enlarge = true
+    @State var enlarge = false
     
     var body: some View {
         VStack {
-            //
+            // Make closure - add content
             RealityView { content in
                 // Add the initial RealityKit content
                 if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
@@ -25,7 +25,8 @@ struct ContentView: View {
             } update: { content in
                 // Update the RealityKit content when SwiftUI state changes
                 if let scene = content.entities.first {
-                    let uniformScale: Float = enlarge ? 5.0 : 1.0
+                    // content.entities.first refers to "content" in Reality view line (20)
+                    let uniformScale: Float = enlarge ? 1.5 : 1.0
                     scene.transform.scale = [uniformScale, uniformScale, uniformScale]
                 }
             }
@@ -48,6 +49,7 @@ struct ContentView: View {
     }
 }
 
+// Please don't mess with the bottom lines - they make ContentView work
 #Preview(windowStyle: .volumetric) {
     ContentView()
 }

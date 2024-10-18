@@ -1,0 +1,58 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.0.16.0.3)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "tv_retro" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0.7853982, -0.7853981, -2.1073422e-8)
+        }
+        prepend references = @Materials/tv_retro.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.8535534, 0.35355338, -0.35355338, 0.14644659)
+        float3 xformOp:scale = (0.0011143171, 0.001114317, 0.0011143171)
+        float3 xformOp:translate = (0.15977462, 0.13170609, -0.06937915)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Looks"
+        {
+            over "tv_retro_2_pxrusdpreviewsurface1sg"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+
+            over "tv_retro_2_pxrusdpreviewsurface2sg"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+        }
+    }
+
+    def "tv_retro_1" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0.785398, 0.78539824, 0)
+        }
+        prepend references = @Materials/tv_retro.usdz@
+    )
+    {
+        float2 ui:nodegraph:node:pos = (20, 20)
+        int ui:nodegraph:node:stackingOrder = 1
+        quatf xformOp:orient = (0.8535534, 0.35355332, 0.3535534, -0.14644659)
+        float3 xformOp:scale = (0.0011565554, 0.0011565553, 0.0011565551)
+        float3 xformOp:translate = (-0.17083612, 0.13286078, -0.059950367)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+
