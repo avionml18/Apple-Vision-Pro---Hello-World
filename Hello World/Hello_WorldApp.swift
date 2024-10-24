@@ -18,7 +18,7 @@ struct Hello_WorldApp: App {
         }
         .windowStyle(.volumetric)
         
-        //This will be a space opened by clicking on the app by default
+//        This will be a space opened by clicking on the app by default
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }

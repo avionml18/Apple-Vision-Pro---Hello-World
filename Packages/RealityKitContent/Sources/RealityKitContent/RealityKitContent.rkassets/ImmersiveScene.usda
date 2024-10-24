@@ -10,17 +10,22 @@
 
 def Xform "Root"
 {
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
     def "tv_retro" (
         active = true
         customData = {
-            float3 rotationEulerHint = (0.7853982, -0.7853981, -2.1073422e-8)
+            float3 rotationEulerHint = (0.7905996, -0.79054594, -0.0073369867)
         }
         prepend references = @Materials/tv_retro.usdz@
     )
     {
-        quatf xformOp:orient = (0.8535534, 0.35355338, -0.35355338, 0.14644659)
+        quatf xformOp:orient = (0.8522574, 0.35408548, -0.35666606, 0.1451553)
         float3 xformOp:scale = (0.0011143171, 0.001114317, 0.0011143171)
-        float3 xformOp:translate = (0.15977462, 0.13170609, -0.06937915)
+        float3 xformOp:translate = (0.25, 0.3, -0.3)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "Looks"
@@ -51,7 +56,7 @@ def Xform "Root"
         int ui:nodegraph:node:stackingOrder = 1
         quatf xformOp:orient = (0.8535534, 0.35355332, 0.3535534, -0.14644659)
         float3 xformOp:scale = (0.0011565554, 0.0011565553, 0.0011565551)
-        float3 xformOp:translate = (-0.17083612, 0.13286078, -0.059950367)
+        float3 xformOp:translate = (-0.25, 0.3, -0.3)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }

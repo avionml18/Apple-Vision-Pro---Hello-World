@@ -60,8 +60,7 @@
     "objectMetadataList" : [
       [
         "90C576A0-F90A-43B8-9998-14918A66F863",
-        "Root",
-        "Sphere"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -69,7 +68,8 @@
       },
       [
         "90C576A0-F90A-43B8-9998-14918A66F863",
-        "Root"
+        "Root",
+        "Sphere"
       ],
       {
         "isExpanded" : true,
@@ -79,6 +79,26 @@
   },
   "9A09521E-95E8-48B7-87E5-3EAD9DD26AD5" : {
     "objectMetadataList" : [
+      [
+        "9A09521E-95E8-48B7-87E5-3EAD9DD26AD5",
+        "Root",
+        "SkySphere"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "9A09521E-95E8-48B7-87E5-3EAD9DD26AD5",
+        "Root",
+        "SkyDome"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
       [
         "9A09521E-95E8-48B7-87E5-3EAD9DD26AD5",
         "Root"
